@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unibo.deathnote.TestDeathNote" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-11-12T19:56:17" hostname="LAPTOP-VIGMCDH8" time="6.304">
+  <properties/>
+  <testcase name="testRules()" classname="it.unibo.deathnote.TestDeathNote" time="0.04"/>
+  <testcase name="testWriteDeathCause()" classname="it.unibo.deathnote.TestDeathNote" time="0.121"/>
+  <testcase name="testWriteName()" classname="it.unibo.deathnote.TestDeathNote" time="0.002"/>
+  <testcase name="testWriteDetails()" classname="it.unibo.deathnote.TestDeathNote" time="6.121"/>
+  <testcase name="testIllegalRule()" classname="it.unibo.deathnote.TestDeathNote" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
