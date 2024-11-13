@@ -50,7 +50,7 @@ public class DeathNoteImplementation implements DeathNote {
 
     @Override
     public String getDeathCause(String name) {
-        if(!deathNote.containsKey(name)){
+        if(!isNameWritten(name)){
             throw new IllegalArgumentException("The name is not in the death note");
         }
         return deathNote.get(name).getCause();
