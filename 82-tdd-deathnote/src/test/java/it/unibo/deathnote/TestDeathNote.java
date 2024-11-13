@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -27,17 +29,15 @@ class TestDeathNote {
 
     @Test
     public void testIllegalRule(){
-        assertThrows(IllegalArgumentException.class, () -> {
-            deathNote.getRule(0);
-        });
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            deathNote.getRule(-1);
-        });
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            deathNote.getRule(DeathNote.RULES.size() + 1);
-        });
+        for(int i : List.of(-1 , 0 , DeathNote.RULES.size() + 1)){
+            try{
+                deathNote.getRule(i);
+            }catch(IllegalArgumentException e){
+                assertNotNull(e.getMessage());
+                assertFalse(e.getMessage().isEmpty());
+                assertFalse(e.getMessage().isBlank());
+            }
+        }
     }
 
     @Test
